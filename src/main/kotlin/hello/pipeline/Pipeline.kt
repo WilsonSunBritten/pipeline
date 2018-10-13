@@ -6,3 +6,14 @@ class Pipeline {
 
 
 }
+
+interface PipelineData
+
+open class PipelineStep {
+    fun setup(data: PipelineData) {
+        // any setup that has to be done for this pipeline step
+    }
+    fun process(data: PipelineData) {
+        // the actuall processing of the pipeline step
+    }
+}
